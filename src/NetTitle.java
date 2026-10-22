@@ -1,0 +1,20 @@
+public abstract class NetTitle extends Title{
+    int availability;
+    int reach;
+    int use;
+
+    NetTitle(String title, String literatureType, int availability, int reach, int use){
+        super(title, literatureType);
+        this.availability = availability;
+        this.reach = reach;
+        this.use = use;
+    }
+
+    double getPseudoCopies(){
+        return (reach * 5) + (availability * 0.5) + use;
+    }
+
+    int getUseFactor(){
+        return use;
+    }
+}
